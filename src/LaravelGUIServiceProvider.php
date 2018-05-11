@@ -13,7 +13,13 @@ class LaravelGUIServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadRoutesFrom(__DIR__.'/Http/routes.php');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'gui');
+
+        $this->publishes([
+            __DIR__.'/resources/views/assets' => public_path('Sarps/gui'),
+        ], 'public');
+
     }
 
     /**
