@@ -36,6 +36,15 @@ Then publish Laravel GUI's assets(Enter this in the command-line):
 
 ## Usage
 
+That's it, simply navigate to www.yoursite.com/LaravelGUI
+
+Examples: 
+```bash
+127.0.0.1:8000/LaravelGUI
+localhost:8000/LaravelGUI
+```
+
+
 ``` php
 $skeleton = new Sarps\LaravelGUI();
 echo $skeleton->echoPhrase('Hello, League!');

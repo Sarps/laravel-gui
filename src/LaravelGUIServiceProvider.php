@@ -17,7 +17,7 @@ class LaravelGUIServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views', 'gui');
 
         $this->publishes([
-            __DIR__.'/resources/views/assets' => public_path('Sarps/gui'),
+            __DIR__.'/resources/assets' => public_path('Sarps/gui'),
         ], 'public');
 
     }
