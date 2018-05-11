@@ -10,25 +10,28 @@
 GUI version of the laravel artisan CLI.
 supports PSR-4.
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
 
 ## Install
 
 Via Composer
 
-``` bash
+```bash
 $ composer require Sarps/LaravelGUI
+```
+
+Once Laravel GUI is installed, you need to register a Laravel service provider, in your config/app.php:
+
+```php
+    'providers' => [
+		...
+		Sarps\LaravelGUI\ArtisanGUIServiceProvider::class,
+	]
+```
+
+Then publish Laravel GUI's assets(Enter this in the command-line):
+
+```bash
+    php artisan vendor:publish
 ```
 
 ## Usage
